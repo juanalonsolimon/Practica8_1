@@ -10,18 +10,18 @@
     <body>
         <div class="">
         </div>
-        <div class="">
+        <div class="container">
             <h2>Practica 8.1: <small>Gestión de vacas</small></h2>
             <div class="col-md-6">
                 <hr>
                     <p><span></span>Agregar vaca</p>
-                <form>
-                    <input>
-                    <input>
-                    <input>
-                    <input>
+                <form class="form-horizontal">
+                    <input type="text" id="nombre" placeholder="Nombre" size="25" class="form-control" required>
+                    <input type="email" id="correo" placeholder="Correo electrónico" size="25" class="form-control">
+                    <input type="number" id="peso" placeholder="Peso de la vaca" class="form-control" size="25" required>
+                    <input type="date" id="fecha" placeholder="Fecha"  size="25" class="form-control">
                     <br>
-                    <input type="submit" value="Guardar">
+                    <input id="enviar" type="submit" value="Guardar" class="btn btn-success">
                 </form>
                 <hr>
                 <hr>
@@ -34,7 +34,7 @@
         </div>
         <hr>
         <hr>
-        <table>
+        <table id="tablita" class="table">
         </table>
     </body>
     <script type="text/javascript" src="funciones.js"></script>
