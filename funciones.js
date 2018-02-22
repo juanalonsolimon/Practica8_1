@@ -52,6 +52,8 @@ function guardar(e)
         vacas.push(cadenajson);
         vacas = JSON.stringify(vacas);
         sessionStorage.setItem('vacas',vacas);
+        $("#mensaje").attr("class","alert alert-danger");
+        $("#mensaje").html("Vaquita insertada correctamente");
     }
     else
     {
@@ -61,6 +63,8 @@ function guardar(e)
         vacas.push(cadenajson);
         vacas = JSON.stringify(vacas);
         sessionStorage.setItem('vacas',vacas);
+        $("#mensaje").attr("class","alert alert-danger");
+        $("#mensaje").html("Vaquita insertada correctamente");
     }
     implementarcampos();
     
