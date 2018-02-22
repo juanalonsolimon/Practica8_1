@@ -1,3 +1,8 @@
 .glyphicon-trash {
     color:red;
 }
+
+
+.redondeado{
+    border-radius: 10px;
+}
