@@ -4,28 +4,33 @@
         <meta charset="utf-8">
         <title>Practica 8.1</title>
         <link rel="stylesheet" href="estilos.css">
-        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="jquery-3.2.1.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+        <script type="text/javascript" src="funciones.js"></script>
     </head>
-    <body>
+    <body >
         <div class="">
         </div>
-        <div class="">
+        <div class="container jumbotron">
             <h2>Practica 8.1: <small>Gestión de vacas</small></h2>
             <div class="col-md-6">
                 <hr>
-                    <p><span></span>Agregar vaca</p>
+                    <p class="lead"><span class="glyphicon glyphicon-plus"></span>Agregar vaca</p>
                 <form>
-                    <input>
-                    <input>
-                    <input>
-                    <input>
+                    <input class="form-control" name="nombre" id="nombre" placeholder="Nombre" type="text" required>
+                    <input class="form-control" name="correo" id="correo" placeholder="Correo de la Vaca" type="email" required>
+                    <input class="form-control" name="peso" id="peso" placeholder="Peso en Kg" type="number">
+                    <input class="form-control" name="fecha" id="fecha"  type="date">
                     <br>
-                    <input type="submit" value="Guardar">
+                    <input type="submit" value="Guardar" class="btn btn-success" id="guardar">
                 </form>
                 <hr>
+                
                 <hr>
                 <div>
+                <div>
+                    
+                </div>
                 </div>
             </div>
             <div class="col-md-6">
@@ -34,7 +39,7 @@
         </div>
         <hr>
         <hr>
-        <table>
+        <table class="table" id="tabla">
         </table>
     </body>
     <script type="text/javascript" src="funciones.js"></script>
