@@ -1,3 +1,10 @@
 .glyphicon-trash {
     color:red;
 }
+form input{
+    display: block;
+}
+
+table tr td{
+    margin: 2px;
+}
