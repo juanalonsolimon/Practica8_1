@@ -25,6 +25,9 @@ function guardarDatos(e){
         return false;
     }
 
+    $("#alert").text("se ha añadido una vaquita");
+    $("#alert").addClass("alert alert-danger");
+    
     var txtjson = "";
     txtjson+='{';
     txtjson+='"nombre": "'+nombre+'", ';
