@@ -4,37 +4,37 @@
         <meta charset="utf-8">
         <title>Practica 8.1</title>
         <link rel="stylesheet" href="estilos.css">
-        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="jquery-3.2.1.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <div class="">
         </div>
-        <div class="">
-            <h2>Practica 8.1: <small>Gestión de vacas</small></h2>
+        <div class="container jumbotron">
+            <h2 class="container">Practica 8.1: <small>Gestión de vacas</small></h2>
             <div class="col-md-6">
                 <hr>
-                    <p><span></span>Agregar vaca</p>
+                    <p><span class="glyphicon glyphicon-plus"></span>Agregar vaca</p>
                 <form>
-                    <input>
-                    <input>
-                    <input>
-                    <input>
+                    <input class="form-control" placeholder="Nombre" type="text" required id="nombre">
+                    <input class="form-control" placeholder="Correo de la vaca" type="email" required id="correo">
+                    <input class="form-control" placeholder="Peso en kg" type="number" id="peso">
+                    <input class="form-control" type="date" id="fecha">
                     <br>
-                    <input type="submit" value="Guardar">
+                    <input type="submit" value="Guardar" class="btn btn-success" id="enviar">
                 </form>
                 <hr>
                 <hr>
-                <div>
+                <div id="contador">
                 </div>
             </div>
             <div class="col-md-6">
-                <img style=" width:100%" src="vaca.jpg" alt="" />
+                <img style=" width:100%" src="vaca.jpg" alt="La Vaca" />
             </div>
         </div>
         <hr>
         <hr>
-        <table>
+        <table class="container" id="vacas">  
         </table>
     </body>
     <script type="text/javascript" src="funciones.js"></script>
