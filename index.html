@@ -1,41 +1,120 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>Practica 8.1</title>
-        <link rel="stylesheet" href="estilos.css">
-        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+        <title>Gestion de Vehiculos</title>
+        
+        <!--Referencias-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
     </head>
     <body>
-        <div class="">
-        </div>
-        <div class="">
-            <h2>Practica 8.1: <small>Gestión de vacas</small></h2>
-            <div class="col-md-6">
-                <hr>
-                    <p><span></span>Agregar vaca</p>
-                <form>
-                    <input>
-                    <input>
-                    <input>
-                    <input>
-                    <br>
-                    <input type="submit" value="Guardar">
-                </form>
-                <hr>
-                <hr>
-                <div>
+        <div class="container">
+                <div class="panel panel-success"id="sucessPanel">
+                      <div class="panel-heading">Perfecto</div>
+                      <div class="panel-body" id="successMesssage">Modelo salvado correctamente!</div>
                 </div>
+
+                <div class="panel panel-danger"id="errorPanel">
+                        <div class="panel-heading">Error</div>
+                       <div class="panel-body" id="errorMessage">Ha ocurrido algun error</div> 
+                </div>
+            <div id="divBrand">
+                <!--Añadir o Editar Seccion Marca -->
+                <h3>Marca</h3>
+                <div id="divBrandList">
+                </div>
+                <input type="button" value="Guardar" class="btn btn-primary"/>
+                <input type="button" value="Regresar" class="btn btn-defaul"/>
+                <input type="button" value="+" class="btn btn-primary"/>
             </div>
-            <div class="col-md-6">
-                <img style=" width:100%" src="vaca.jpg" alt="" />
+
+            <div id="divModel">
+                <!--Añadir o Editar Seccion Modelos-->
+                <h3>Modelos</h3>
+                <div id="divModelList">
+                    <table class="datatable table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Marca
+                                </th>
+                                <th>
+                                    Modelo
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="modelList">
+                        </tbody>
+                    </table>
+                </div>
+                <input type="button" value="Guardar" class="btn btn-primary"/>
+                <input type="button" value="Regresar" class="btn btn-defaul" />
+                <input type="button" value="+" class="btn btn-primary"/>
             </div>
+            <div class="row" id="divMain">
+                    <div class="col col-sm-6">
+                        <form id="formData">
+                            <div class="input-group form-group">
+                                <span class="input-group-addon">Matricula</span>
+                                <input name="carId" id="carId" type="text" required class="form-control"/>
+                            </div>
+
+                            <div class="input-group form-group">
+                                    <span class="input-group-addon">Marca</span>
+                                    <select name="brand" id="brand" required class="form-control"></select>
+                            </div>
+
+                            <div class="input-group form-group">
+                                    <span class="input-group-addon">Modelo</span>
+                                    <select name="model"  id="model" required class="form-control"></select>
+                            </div>
+
+                            <div class="input-group form-group">
+                                    <span class="input-group-addon">Transmision</span>
+                                    <span class="input-group-addon">
+                                            <label><input type="radio" name="transmission" id="transmission" value="Automatic"> Automatica</label>
+                                    </span>
+                                    <span class="input-group-addon">
+                                           <label><input type="radio" name="transmission" id="transmission" value="Mecanic"> Mecanica</label>
+                                    </span>
+                            </div>
+
+                            <div class="input-group form-group">
+                                    <span class="input-group-addon">Descripcion</span>
+                                    <textarea name="commentary"  id="commentary" required class="form-control"></textarea>
+                            </div>
+                            <div>
+                                    <input type="button" class="btn btn-default" value="Nuevo"/>
+                                    <input type="button" class="btn btn-primary" value="Guardar"/>
+                            </div>
+                            <hr>
+                            <div class="form-group" id="addButtons">
+                                <input type="button" value="Añadir Marca" class="btn btn-defaul"/>
+                                <input type="button" value="Añadir Modelo" class="btn btn-defaul"/>
+                                
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col col-sm-6">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Matricula</th>
+                                    <th>Marca</th>
+                                    <th>Modelo</th>
+                                    <th>Transmision</th>
+                                    <th>Descripcion</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tBody"></tbody>
+                        </table>
+                    </div>
+            </div>            
         </div>
-        <hr>
-        <hr>
-        <table>
-        </table>
     </body>
-    <script type="text/javascript" src="funciones.js"></script>
+    <script src="funciones.js"></script>
 </html>
